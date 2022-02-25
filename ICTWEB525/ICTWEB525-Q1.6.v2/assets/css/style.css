@@ -1,0 +1,86 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+/* CSS HEX PALLETE */
+--primary-white: #fefdffff;
+--accent-white: #c1bfb5ff;
+--secondary-white: #8eb1c7ff;
+--primary-red: #b02e0cff;
+--accent-red: #eb4511ff;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 8fr 0.3fr;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.logo {
+  grid-area: 1/1/1/1;
+  background-image: url("../images/milogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-bottom: 0.2em solid var(--primary-red);
+}
+.nav {
+  grid-area: 1/3/1/1;
+  font-size: 1.3em;
+  border-bottom: 0.2em solid var(--primary-red);
+  position: fixed;
+  top: 0%;
+  width: 100vw;
+  height: 5vh;
+  background-color: var(--primary-red);
+  text-align: right;
+}
+.nav a {
+  right: 0%;
+  text-decoration: none;
+  margin: 1em;
+  color: var(--primary-white);
+}
+.content-left {
+  grid-area: 2/1/4/2;
+  background-color: var(--accent-white);
+  color: black;
+  line-height: 1.5em;
+}
+.content-middle {
+  grid-area: 2/2/4/3;
+  line-height: 1.5em;
+}
+.content-right {
+  grid-area: 2/3/4/4;
+  background-color: var(--accent-white);
+  color: black;
+  line-height: 1.5em;
+}
+.footer {
+  grid-area: 3/1/1/4;
+  background-color: grey;
+  color: var(--accent-white);
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0%;
+  width: 100vw;
+  height: 5vh;
+}
+.footer h2 {
+  margin-top: 0.1em;
+}
+.video-style {
+  width: 25vw;
+  margin: 2em;
+}
+h1 {
+  margin: 1em;
+}
+p {
+  margin: 1em;
+}

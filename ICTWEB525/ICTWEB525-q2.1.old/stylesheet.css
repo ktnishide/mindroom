@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-image: url('./assets/cloud-recesses.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+a:hover {
+    color: red;
+}
+
+.header {
+    width: 100vw;
+    height: 7vh;
+    background-color: rgba(218,229,238,0.3);
+}
+
+.nav {
+    font-size: 1.5em;
+    margin-left: 2vw;
+    padding-top: 2vh;
+}
+
+.footer {
+    height: 7vh;
+    text-align: center;
+    padding-top: 1.5em;
+    font-size: 1.5em;
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgba(218,229,238,0.3);
+}
+
+.container {
+    height: 80vh;
+    background-color: rgba(218,229,238,0.3);
+}
+
+.left {
+    float: left;
+    width: 40vw;
+    height: 80vh;
+    margin-left: 2vw;
+}
+
+.left img {
+    height: 70vh;
+    margin-top: 7vh;
+}
+
+.right {
+    float: right;
+    width: 50vw;
+    height: 80vh;
+    margin-right: 2vw;
+}
+
+.imgSize-hs {
+    height: 20vh;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'Quicksand', serif;
+    font-size: 3em;
+}

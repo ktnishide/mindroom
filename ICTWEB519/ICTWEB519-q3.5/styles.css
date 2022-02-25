@@ -1,0 +1,51 @@
+body {
+  background-color: lightblue;
+}
+table {
+  width: 90vw;
+  margin: 0 auto;
+}
+td {
+  text-align: center;
+}
+.fitCTA {
+  object-fit: cover;
+  width: 90vw;
+  height: 40vh;
+}
+a {
+  color: black;
+  font-size: 1.2em;
+  margin-right: 1em;
+  text-decoration: none;
+}
+a:hover {
+  color: #687aaa;
+}
+.wwd {
+  background-color: rgba(255, 228, 196, 0.3);
+}
+.wwd img {
+  width: 25vw;
+}
+.oe {
+  background-color: rgba(71, 173, 177, 0.3);
+}
+.oe img {
+  width: 25vw;
+}
+.gi {
+  background-color: rgba(243, 243, 48, 0.3);
+}
+.gi img {
+  width: 25vw;
+}
+.tdw25 {
+  width: 25%;
+}
+.sticky {
+    z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

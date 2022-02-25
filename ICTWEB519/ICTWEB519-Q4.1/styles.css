@@ -1,0 +1,35 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body,
+html {
+  height: 100%;
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.sticky {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.content-bg-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: url("content.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
