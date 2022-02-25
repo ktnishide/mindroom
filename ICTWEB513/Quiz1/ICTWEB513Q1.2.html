@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Guess the number</h1>
+    <h2>between 1 and 100</h2>
+
+    <div class="form">
+      <input type="number" id="guessField" class="guessField" />
+      <input type="submit" value="Guess" class="guessSubmit" />
+    </div>
+
+    <div class="resultParas">
+      <p class="resultMessage">Too low!</p>
+    </div>
+
+    <script>
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+      console.log("Random number: " + randomNumber);
+      const resultMessage = document.querySelector(".resultMessage");
+      const guessSubmit = document.querySelector(".guessSubmit");
+      const guessField = document.querySelector(".guessField");
+      let guessCount = 1;
+      let resetButton;
+
+      function checkGuess() {
+        const userGuess = Number(guessField.value);
+        console.log(userGuess);
+
+        if (userGuess === randomNumber) {
+          resultMessage.textContent =
+            "Correct, you took " + guessCount + " attempts";
+          setReset();
+        } else {
+          if (userGuess < randomNumber) {
+            resultMessage.textContent = "Too low!";
+          } else if (userGuess > randomNumber) {
+            resultMessage.textContent = "Too high!";
+          }
+        }
+
+        guessCount++;
+        guessField.value = "";
+        guessField.focus();
+      }
+
+      guessSubmit.addEventListener("click", checkGuess);
+
+      function setReset() {
+        guessField.disabled = true;
+        guessSubmit.disabled = true;
+        resetButton = document.createElement("button");
+        resetButton.textContent = "Start new game";
+        document.body.appendChild(resetButton);
+        resetButton.addEventListener("click", resetGame);
+      }
+
+      function resetGame() {
+        guessCount = 1;
+        const resetParas = document.querySelectorAll(".resultParas p");
+        for (const resetPara of resetParas) {
+          resetPara.textContent = "";
+        }
+
+        resetButton.parentNode.removeChild(resetButton);
+        guessField.disabled = false;
+        guessSubmit.disabled = false;
+        guessField.value = "";
+        guessField.focus();
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+        console.log("Random number: " + randomNumber);
+      }
+    </script>
+  </body>
+</html>
