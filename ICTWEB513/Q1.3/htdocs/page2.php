@@ -3,26 +3,36 @@ $uname = $_POST['uname'];
 $pwd = $_POST['pwd'];
 $n = FALSE;
 $p = FALSE;
+$successContent = '<div class="logo"></div>
+<div class="login-block">
+    <h1>Login Sucess! </h1>
+    <h1><a href="index.php">[Return to index]</a></h1>
+</div>';
+$failureContent = '<div class="logo"></div>
+<div class="login-block">
+    <h1>Login failure =( </h1>
+    <h1><a href="index.php">[Return to index]</a></h1>
+</div>';
 
 if ($uname == NULL || $pwd == NULL) {
-    $body = '<body onload="bounce()">';
+    $body = $failureContent;
 }
 if (strtolower($uname) != 'scott') {
-    $body = '<body onload="bounce()">';
+    // $body = $failureContent;
     $n = FALSE;
 } else {
     $n = TRUE;
 }
 if (strtolower($pwd) != 'x-men') {
-    $body = '<body onload="bounce()">';
+    // $body = $failureContent;
     $p = FALSE;
 } else {
     $p = TRUE;
 }
 if (($n == $p) && ($n == TRUE)) {
-    $body = '<body>';
+    $body = $successContent;
 } else {
-    $body = '<body onload="bounce()">';
+    $body = $failureContent;
 }
 
 ?>
@@ -39,10 +49,6 @@ if (($n == $p) && ($n == TRUE)) {
 </head>
 
 <?php echo $body; ?>
-<div class="logo"></div>
-<div class="login-block">
-    <h1><a href="index.php">[Return to index]</a></h1>
-</div>
 <script>
     function bounce() {
         window.location.href = "index.php";

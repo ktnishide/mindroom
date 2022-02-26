@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+      }
+      #green {
+        background-color: green;
+      }
+      #red {
+        background-color: red;
+      }
+      #yellow {
+        background-color: yellow;
+      }
+      #plum {
+        background-color: plum;
+        margin-left: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="green">click on me</div>
+    <div id="yellow">click on me</div>
+    <div id="red">click on me</div>
+    <script>
+      var gBox = document.getElementById("green");
+      gBox.addEventListener("click", () => (gBox.style.marginLeft = "50%"));
+
+      var yBox = document.getElementById("yellow");
+      yBox.addEventListener("click", () => (yBox.style.backgroundColor = "black"));
+
+      rBox = document.getElementById("red");
+      rBox.addEventListener("click", () => {
+        pBox = document.createElement("div");
+        pBox.setAttribute("id", "plum");
+        document.body.appendChild(pBox);
+      });
+    </script>
+  </body>
+</html>
