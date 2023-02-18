@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: rgb(47, 47, 47);
+		}
+
+		div {
+			margin: 2em;
+		}
+
+		input {
+			background-color: rgb(177, 177, 177);
+			font-size: 1.2em;
+			padding: .3em;
+			margin: .2em;
+			border-radius: 15px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<form action="output.php" method="post">
+		<div>
+			<input type="text" name="FirstName" placeholder="Enter First Name">
+			<input type="text" name="LastName" placeholder="Enter Last Name">
+			<input type="text" name="suerhero" placeholder="Enter Favorite Super Hero">
+			<input type="submit" value="submit">
+		</div>
+	</form>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<?php
+		$fName = $_POST['FirstName'];
+		$lName = $_POST['LastName'];
+		$sh = $_POST['superhero'];
+		echo 'Based off the information, ' .$fName. ' ' .$lName.' has a favourite superhero called: ' .$sh;
+	?>
+</body>
+</html>
